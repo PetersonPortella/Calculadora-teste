@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body, html{
+  
+    height: 100%;
+    
+}
+
+header{  
+    width: 100%;
+    height: 120px;
+    color: #fff;
+    background: #111111;
+ }
+
+ nav{
+    height: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .logo{
+    font-size: 40px;
+ }
+
+ .logo span{
+    color: #4f51fb;
+ }
+
+ ul{
+    display: flex;
+    align-items: center;
+ }
+
+ li{
+    list-style: none;
+    margin-left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4f51fb;
+    padding: 10px 15px;
+    border-radius: 10px;
+ }
+
+ li:hover{
+   background-color : #000000;
+ }
+
+ .conteudo1{
+   border-radius: 170px;
+   width: 350px;
+   height: 350px;
+   background: blue;
+   
+ }
+
+ .conteudo2{
+  border-radius: 170px;
+  width: 350px;
+  height: 350px;
+  background: pink;
+}
+
+.conteudo3{
+  border-radius: 170px;
+  width: 350px;
+  height: 350px;
+  background: rgb(135, 240, 240);
+}
+
+
+ .caixa{
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   color:#a10000;
+   font-size: 2em;
+   min-width: 30%;
+
+ }
+
+ img{
+  border-radius: 170px;
+   width: 350px;
+   height: 350px;
+ }
+
+ .div1{
+   border: 2px solid;
+   background: #4f51fb;
+   width: 60%;
+   height: 40%;
+   float: left;
+
+ }
+
+ .div2{
+   border: 2px solid;
+   background: #0205ce;
+   width: 30%;
+   height: 40%;
+   float: right;
+ }
+
+ .div3{
+   clear: both;
+   border: 2px solid;
+   background: #0da85b;
+
+ }
+
+ .div4{
+   border: 2px solid;
+   background: #bd8f11;
+ }
+
+ footer{
+   border: 2px solid;
+   background: #b913b9;
+   height: 150px;
+   
+ }
+ 
+ 
+
+
