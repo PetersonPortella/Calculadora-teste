@@ -1,53 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <body>
-        <header>
-            <nav>
-                
-                <h1 class="logo">Peterson <span>Portella</span></h1>
-                <ul>
-                    <li>Home</li>
-                    <li>Cursos</li>
-                    <li>Contato</li>
-                
-                </ul>
+let contador = 0;
+let input = document.getElementById('input-add');
+let btn = document.getElementById('button-add');
+let main = document.getElementById('lista');
 
-            </nav>
-        </header>
+function addTarefa(){
+    //pegar o que esta digitado no input
+    let valorInput = input.value;
 
-        <br>
-        
-        <section class="caixa">
-            <div class="conteudo1"><img src="imagens/js.png" width="100%"></div>
-            <div class="conteudo2"><img src="imagens/php.jpg" width="100%"></div>
-            <div class="conteudo3"><img src="imagens/py.png" width="100%"></div>
-        </section>
-        <br>
+    //se não for vazio,null ou indefinido  
+    if ((valorInput !=="")  &&  (valorInput!==null) && (valorInput!==undefined)){
 
-        <div class="div1">amanha </div>
-        <div class="div2">
-            <h2>Cadastro</h2>
+        ++contador;
 
-            Nome <br>
-            <input type="text"> <br>
-            Nome <br>
-            <input type="text"> <br>
-            Nome <br>
-            <input type="text" value="@"> <br>
+        let novoItem = `<div id="${contador}" class="item">
 
-        </div>
-        <div class="div3">amanha </div>
-        <div class="div4">amanha </div>
-        
-        <footer>amanha </footer>
-        
+            <div class="item-icone">
+                <span  id="icone_${contador}" onclick="marcar(${contador})" class= "material-symbols-outlined"> circle </span>
+            </div>
+
+            <div onclick="marcar(${contador})" class="item-texto">
+                ${valorInput}
+            </div>
+
+            <div class="item-botao">
+                <button onclick="del(${contador})" class="deletar"><span class="material-symbols-outlined">
+                     delete
+                </span>Deletar</button>
+            </div>
+
+            </div>`;
+
+            //adicionar o item no no main
+            main.innerHTML += novoItem;
+
+            //zerar o input
+            input.value = "";
+            input.focus();
+        }
+}  
+
+function del(id){ //deletar as tarefas
+    var tarefa = document.getElementById(id);
+    tarefa.remove();
+
+}
+
+function marcar(id) { //funçaõ de criar a lista e modificar
+    var item = document.getElementById(id);
+    var icone = document.getElementById("icone_" + id);
+    var classe = item.getAttribute('class');
     
-        
-    </body>
-</html>
+    if (classe == 'item') {
+        item.classList.add('item-clicado');  //Adiciona ou exlui uma ou mais classes ao elemento.
+        icone.textContent = "check_circle";  // Alterar o ícone para "check_circle"
+    } else {
+        item.classList.remove('item-clicado');
+        icone.textContent = "circle";  // Alterar o ícone de volta para "circle"
+    }
+}
+
+input.addEventListener("keyup", function (event){ //add uma tarefa com o botão "enter"
+    //se clicar enter(13 numero do botão enter)
+    if(event.keyCode === 13){
+        event.preventDefault();
+        btn.click();
+    }
+})
