@@ -2,9 +2,311 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
-body{
-    background: #ec9676;
+body, html{
+    color: #000000;
+    background: #ebab3c;
+    height: 100%;
+  
 }
 
+/*inicio do cabecalho*/
+header{
+    border: 2px solid rgb(36, 252, 17);
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.nome{
+    border: 2px solid rgb(44, 6, 216);
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.nome p{
+    font-size: 35px;
+}
+
+button.noite{
+    border: none;
+    background: #009de000;
+    color: #ffffff;
+    width: 50px;
+    margin-right: 50px;
+}
+
+button.noite:hover{
+    background: #8b8b8b; 
+}
+
+.menu{
+    border: 2px solid red;
+    width: 60%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li{
+    display: inline-block;
+    padding: 0 25px; 
+    margin-right: 35px;  
+    transition: 0.5s;    
+}
+
+
+
+.menu li a{
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px; 
+    transition: 1s;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    padding: 10px 20px;
+    color:#000000;
+    text-decoration: overline;  
+    background: none;
+    
+}
+
+/*final do cabecalho*/
+
+/*inicio home*/
+section{
+   
+    width: 85%;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    padding-right: 100px;
+    margin-top: 30px;
+   
+}
+
+.foto {
+    width: 25%;
+}
+
+.foto img {
+    border-radius: 1px 120px;
+    border: 10px solid yellow;
+    position: center;
+    animation: borda 3s infinite linear, subirDescer 2s infinite ease-in-out;
+}
+
+/* Animação de mudança de cor da borda */
+@keyframes borda {
+    20% {
+        border-color: #009de0;
+    }
+    75% {
+        border-color: #23ee09;
+    }
+    100% {
+        border-color: yellow;
+    }
+}
+
+/* Animação de subida e descida */
+@keyframes subirDescer {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+.texto{
+    text-align: center;
+    font-size: 25px;
+}
+
+button{
+    color: white;
+    font-size: 15px;
+    background: black;
+    width: 200px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+button:hover{
+    padding-bottom: 3px;
+    background: #5c5c5c;
+}
+
+.redes{  
+    width: 4.5%;
+    height: 100px;
+    margin-bottom: 170px;
+    padding-left: 40px;
+}    
+
+.redes ul li{
+    background: #009de0;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    padding: 20px 0;   
+}
+
+.redes ul li:hover{
+    padding-top: 15px;
+}
+
+/*final  home*/
+
+/*inicio do contato*/
+
+.contato{
+    width: 35%;
+    height: 530px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff33;
+    border-radius: 25px;
+    border: 4px solid #000000;
+    margin-top: 80px;
+}   
+
+.caixa1{
+    width: 75%;
+    text-align: center;
+    margin-top: 160px;
+    margin-left: 40px;
+}
+
+.caixa2{
+    width: 13%;
+    margin-right: 60px;
+    margin-top: 80px;
+}
+
+.caixa2 ul li{
+    list-style: none;
+    padding-top: 15px;
+
+}
+
+/*final do contato*/
+
+/*inicio do sobre*/
+.sobre{
+    border: 2px solid red;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.sobre1{
+    border: 2px solid red;
+    width: 52%;
+    font-size: 27px;
+    color: black;
+
+}
+
+.sobre2{ 
+    border: 2px solid red;
+    width: 28%;
+    
+}
+
+
+/*final do sobre*/
+
+/*inicio do portifolio*/
+
+.quadro1{ 
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px ;
+    
+}
+
+.foto1{
+    border: 2px solid #000000;
+    background: #000000;
+    width: 15%;
+    height: 250px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.foto1:hover{
+    margin-top: 10px;
+}
+
+p{
+    font-size: 22px;
+}
+/*final do portifolio*/
+
+
+footer{
+    border: 2px solid red;
+    background: #ecc40e;
+    height: 175px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.skill{
+    border: 2px solid rgb(190, 38, 157);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill ul li{
+    border: 2px solid rgb(20, 198, 204);
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+}
+
+.skill li a {
+    background: #23ee09;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.qrcode{
+    border: 2px solid rgb(20, 198, 204);
+    width: 20%;
+}
