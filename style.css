@@ -7,7 +7,7 @@
 
 body, html{
     color: #000000;
-    background: #ebab3c;
+    background: #d4d4d4;
     height: 100%;
   
 }
@@ -31,7 +31,6 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
 }
 
 .nome p{
@@ -41,7 +40,6 @@ header{
 button.noite{
     border: none;
     background: #009de000;
-    color: #ffffff;
     width: 50px;
     margin-right: 50px;
 }
@@ -52,7 +50,7 @@ button.noite:hover{
 
 .menu{
     border: 2px solid red;
-    width: 60%;
+    width: 40%;
     height: 150px;
     display: flex;
     justify-content: center;
@@ -69,18 +67,18 @@ button.noite:hover{
 
 
 .menu li a{
-    color: white;
+    color: #000000;
     padding: 5px 20px;
     border-radius: 5px; 
-    transition: 1s;
     text-decoration: none;
+    text-decoration: overline; 
+    transition: 1s;
 }
 
 .menu li a:hover{
     padding: 10px 20px;
-    color:#000000;
-    text-decoration: overline;  
-    background: none;
+    color:#ffffff;  
+    background: black;
     
 }
 
@@ -167,7 +165,6 @@ button:hover{
 }    
 
 .redes ul li{
-    background: #009de0;
     list-style: none;
     width: 80px;
     height: 80px;
@@ -215,35 +212,6 @@ button:hover{
 
 /*final do contato*/
 
-/*inicio do sobre*/
-.sobre{
-    border: 2px solid red;
-    width: 80%;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.sobre1{
-    border: 2px solid red;
-    width: 52%;
-    font-size: 27px;
-    color: black;
-
-}
-
-.sobre2{ 
-    border: 2px solid red;
-    width: 28%;
-    
-}
-
-
-/*final do sobre*/
-
 /*inicio do portifolio*/
 
 .quadro1{ 
@@ -251,8 +219,7 @@ button:hover{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 150px ;
-    
+    margin-top: 150px ; 
 }
 
 .foto1{
@@ -273,40 +240,54 @@ button:hover{
 p{
     font-size: 22px;
 }
+
 /*final do portifolio*/
 
 
 footer{
     border: 2px solid red;
-    background: #ecc40e;
+    background: #ffffff;
     height: 175px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
    
 }
 
 .skill{
     border: 2px solid rgb(190, 38, 157);
-    width: 70%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .skill ul li{
-    border: 2px solid rgb(20, 198, 204);
     display: inline;
     text-decoration: none;
     list-style: none;
 }
 
 .skill li a {
-    background: #23ee09;
     width: 100%;
     padding: 0 25px;
 }
 
+.skill ul li:hover{
+    margin-bottom: 40%;
+}
+
 .qrcode{
     border: 2px solid rgb(20, 198, 204);
-    width: 20%;
+    font-weight: bold;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copy{
+    background: #ffffff;
+    text-align: center;
+    font-weight: bold;
 }
